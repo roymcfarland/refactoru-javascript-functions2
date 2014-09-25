@@ -81,14 +81,18 @@
 /////////// EXERCISE 7 //////////////
 /////////////////////////////////////
 
-var vowels = function(string) {
-	string.split('').filter(function(letter){
-		if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u'){
-			return true} else {
-			return false}
-			}
-console.log( vowels('alabama') );
-console.log( vowels('What lets in youth?') );
+// var vowels = function(string) {
+// 	var newArray = [];
+// 	var splitString = string.split('');
+// 	for (var i=0; i<splitString.length; i++) {
+// 		if (splitString[i] === 'a' || splitString[i] ===  'e' || splitString[i] ===  'i' || splitString[i] ===  'o' || splitString[i] ===  'u') {
+// 			newArray.push(splitString[i]);
+// 		}
+// 	}
+// 	return newArray;
+// };
+// console.log( vowels('alabama') );
+// console.log( vowels('What lets in youth?') );
 
 
 
@@ -96,20 +100,53 @@ console.log( vowels('What lets in youth?') );
 /////////// EXERCISE 8 //////////////
 /////////////////////////////////////
 
+// var twins = function(arr) {
+// 	for (var i=0; i<arr.length; i+=2) {
+// 		if (arr[i] !== arr[i+1]) {
+// 			return 'false';
+// 		}
+// 	};
+// 	return 'true';
+// };
+// console.log( twins(['a', 'a', 'b', 'b', 'c', 'c']) );
+// console.log( twins(['a', 'a', 'b', 'z']) );
+// console.log( twins(['a', 'a', 'b']) );
+// console.log( twins(['a', 'a', 'b', undefined]) );
 
 
 
+/////////////////////////////////////
+/////////// EXERCISE 9 //////////////
+/////////////////////////////////////
+
+// var or = function(arr) {
+// 	for (var i=0; i<arr.length; i++) {
+// 		if (arr[i] === true) {
+// 			return true;
+// 		} else if (arr[i] === undefined) {
+// 			return false;
+// 		}
+// 	};
+// 	return false;
+// };
+// console.log( or([false, false, true, false]) );
+// console.log( or([false, false, false]) );
+// console.log( or([]) );
 
 
 
+/////////////////////////////////////
+/////////// EXERCISE 10 //////////////
+/////////////////////////////////////
 
-
-
-
-
-
-
-
-
-
-
+var unique = function(arr) {
+	var newArr = [];
+	for (var i=0; i<arr.length; i++) {
+		if (newArr.indexOf(arr[i]) === -1) {
+			newArr.push(arr[i]);
+		};
+	};
+	return newArr;
+};
+console.log( unique(['a', 'b', 'a', 'c', 'd', 'd']) );
+console.log( unique(['todd', 'avery', 'maria', 'avery']) );
